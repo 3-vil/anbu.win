@@ -1,5 +1,5 @@
 if IY_LOADED and not _G.IY_DEBUG == true then
-    -- error("Infinite Yield is already running!", 0)
+    -- error("Anbu Yield is already running!", 0)
     return
 end
 
@@ -12,7 +12,7 @@ Players = cloneref(game:GetService("Players"))
 if not game:IsLoaded() then
     local notLoaded = Instance.new("Message")
     notLoaded.Parent = COREGUI
-    notLoaded.Text = "Infinite Yield is waiting for the game to load"
+    notLoaded.Text = "Anbu Yield is waiting for the game to load"
     game.Loaded:Wait()
     notLoaded:Destroy()
 end
@@ -192,7 +192,8 @@ scroll = {}
 Holder.Name = randomString()
 Holder.Parent = PARENT
 Holder.Active = true
-Holder.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+Holder.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 Holder.BorderSizePixel = 0
 Holder.Position = UDim2.new(1, -250, 1, -220)
 Holder.Size = UDim2.new(0, 250, 0, 220)
@@ -207,7 +208,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Infinite Yield FE v" .. currentVersion
+Title.Text = "Anbu Yield" 
 
 do
 	local emoji = ({
@@ -245,7 +246,8 @@ table.insert(text1,Title)
 Dark.Name = "Dark"
 Dark.Parent = Holder
 Dark.Active = true
-Dark.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+Dark.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 Dark.BorderSizePixel = 0
 Dark.Position = UDim2.new(0, 0, 0, 45)
 Dark.Size = UDim2.new(0, 250, 0, 175)
@@ -304,7 +306,8 @@ ReferenceButton.ZIndex = 10
 Settings.Name = "Settings"
 Settings.Parent = Holder
 Settings.Active = true
-Settings.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+Settings.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 Settings.BorderSizePixel = 0
 Settings.Position = UDim2.new(0, 0, 0, 220)
 Settings.Size = UDim2.new(0, 250, 0, 175)
@@ -485,7 +488,8 @@ table.insert(text1,Example)
 
 Notification.Name = randomString()
 Notification.Parent = PARENT
-Notification.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+Notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 Notification.BorderSizePixel = 0
 Notification.Position = UDim2.new(1, -500, 1, 20)
 Notification.Size = UDim2.new(0, 250, 0, 100)
@@ -594,7 +598,8 @@ table.insert(text1,Description)
 IntroBackground.Name = "IntroBackground"
 IntroBackground.Parent = Holder
 IntroBackground.Active = true
-IntroBackground.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+IntroBackground.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 IntroBackground.BorderSizePixel = 0
 IntroBackground.Position = UDim2.new(0, 0, 0, 45)
 IntroBackground.Size = UDim2.new(0, 250, 0, 175)
@@ -738,7 +743,8 @@ KeybindEditor.ZIndex = 10
 background_2.Name = "background"
 background_2.Parent = KeybindEditor
 background_2.Active = true
-background_2.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+background_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 background_2.BorderSizePixel = 0
 background_2.Position = UDim2.new(0, 0, 0, 20)
 background_2.Size = UDim2.new(0, 360, 0, 185)
@@ -748,7 +754,8 @@ table.insert(shade1,background_2)
 Dark_3.Name = "Dark"
 Dark_3.Parent = background_2
 Dark_3.Active = true
-Dark_3.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+Dark_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 Dark_3.BorderSizePixel = 0
 Dark_3.Position = UDim2.new(0, 135, 0, 0)
 Dark_3.Size = UDim2.new(0, 2, 0, 185)
@@ -1313,7 +1320,8 @@ PluginEditor.ZIndex = 10
 background_3.Name = "background"
 background_3.Parent = PluginEditor
 background_3.Active = true
-background_3.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+background_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 background_3.BorderSizePixel = 0
 background_3.Position = UDim2.new(0, 0, 0, 20)
 background_3.Size = UDim2.new(0, 360, 0, 160)
@@ -1488,7 +1496,8 @@ ToPartFrame.ZIndex = 10
 background_4.Name = "background"
 background_4.Parent = ToPartFrame
 background_4.Active = true
-background_4.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+background_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Black
+
 background_4.BorderSizePixel = 0
 background_4.Position = UDim2.new(0, 0, 0, 20)
 background_4.Size = UDim2.new(0, 360, 0, 117)
@@ -1807,6 +1816,12 @@ selectJoin.Text = "Join Logs"
 selectJoin.TextColor3 = Color3.new(1, 1, 1)
 table.insert(shade3,selectJoin)
 table.insert(text1,selectJoin)
+Button.MouseEnter:Connect(function()
+    Button.BackgroundColor3 = Color3.fromRGB(120, 40, 160) -- Purple Hover
+end)
+Button.MouseLeave:Connect(function()
+    Button.BackgroundColor3 = Color3.fromRGB(60, 60, 60) -- Return to Normal
+end)
 
 function create(data)
 	local insts = {}
@@ -2997,7 +3012,7 @@ function saves()
         if jsonAttempts >= 10 then
             nosaves = true
             useFactorySettings()
-            createPopup("Sorry, we have attempted to parse your save file, but it is unreadable!\n\nInfinite Yield is now using factory settings until your exploit's file system works.\n\nYour save file has not been deleted.")
+            createPopup("Sorry, we have attempted to parse your save file, but it is unreadable!\n\nAnbu Yield is now using factory settings until your exploit's file system works.\n\nYour save file has not been deleted.")
         else
             nosaves = true
             useFactorySettings()
@@ -3879,7 +3894,7 @@ SaveChatlogs.MouseButton1Down:Connect(function()
 		if #scroll_2:GetChildren() > 0 then
 			notify("Loading",'Hold on a sec')
 			local placeName = CleanFileName(MarketplaceService:GetProductInfo(PlaceId).Name)
-			local writelogs = '-- Infinite Yield Chat logs for "'..placeName..'"\n'
+			local writelogs = '-- Anbu Yield Chat logs for "'..placeName..'"\n'
 			for _, child in pairs(scroll_2:GetChildren()) do
 				writelogs = writelogs..'\n'..child.Text
 			end
@@ -4323,7 +4338,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
-CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield support server.'}
+
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'oldconsole', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'explorer / dex', DESC = 'Opens DEX by Moon'}
@@ -12830,13 +12845,13 @@ end)
 
 task.spawn(function()
 	local success, latestVersionInfo = pcall(function() 
-		local versionJson = game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version')
+		
 		return HttpService:JSONDecode(versionJson)
 	end)
 
 	if success then
 		if currentVersion ~= latestVersionInfo.Version then
-			notify('Outdated','Get the new version at infyiff.github.io')
+			
 		end
 
 		if latestVersionInfo.Announcement and latestVersionInfo.Announcement ~= '' then
@@ -12938,5 +12953,5 @@ task.spawn(function()
 	Credits:Destroy()
 	IntroBackground:Destroy()
 	minimizeHolder()
-	if IsOnMobile then notify("Unstable Device", "On mobile, Infinite Yield may have issues or features that are not functioning correctly.") end
+	if IsOnMobile then notify("Unstable Device", "On mobile, Anbu Yield may have issues or features that are not functioning correctly.") end
 end)

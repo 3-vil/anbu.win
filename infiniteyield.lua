@@ -2784,33 +2784,7 @@ reference = (function()
 		{110,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=4,Name="Text",Parent={105},Position=UDim2.new(0,8,0,130),Size=UDim2.new(1,-8,0,16),Text="Example:",TextColor3=Color3.new(1,1,1),TextSize=14,TextWrapped=true,TextXAlignment=0,TextYAlignment=0,ZIndex=10,}},
 		{111,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=3,Name="Text",Parent={105},Position=UDim2.new(0,8,0,148),Size=UDim2.new(1,-8,0,16),Text="Setting up 'goto $1' on the OnChatted event will teleport you to any player that chats.",TextColor3=Color3.new(1,1,1),TextSize=14,TextWrapped=true,TextXAlignment=0,TextYAlignment=0,ZIndex=10,}},
 		{112,"Frame",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Name="Section",Parent={7},Size=UDim2.new(1,0,0,105),ZIndex=10,}},
-	local colors = {
-    Color3.new(1, 0, 0), -- Red
-    Color3.new(1, 0.5, 0), -- Orange
-    Color3.new(1, 1, 0), -- Yellow
-    Color3.new(0, 1, 0), -- Green
-    Color3.new(0, 0, 1), -- Blue
-    Color3.new(0.29, 0, 0.51), -- Indigo
-    Color3.new(0.56, 0, 1) -- Violet
-}
 
-local text = "Anbu.win"
-local parent = script.Parent -- Adjust this to your specific parent object
-
-local xOffset = 0
-for i = 1, #text do
-    local char = text:sub(i, i)
-    local label = Instance.new("TextLabel")
-    label.BackgroundTransparency = 1
-    label.Font = Enum.Font.SourceSans
-    label.Text = char
-    label.TextColor3 = colors[(i - 1) % #colors + 1]
-    label.TextSize = 20
-    label.Position = UDim2.new(0, xOffset, 0, 0)
-    label.Size = UDim2.new(0, 20, 0, 20) -- Adjust size as needed
-    label.Parent = parent
-    xOffset = xOffset + label.Size.X.Offset
-end
 
 		
 	})
